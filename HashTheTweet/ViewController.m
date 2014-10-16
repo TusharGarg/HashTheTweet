@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <AFNetworking.h>
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *bootcampLabel;
 
 @end
 
@@ -16,9 +19,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://www.mocky.io/v2/543fb96fc034f90c16e8af4c" parameters:nil success:
+     ^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+
+         _bootcampLabel.text =   responseObject[@"title"];
+
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         
+     }];
+
+
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

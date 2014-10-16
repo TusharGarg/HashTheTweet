@@ -1,0 +1,4 @@
+pod 'AFNetworking'
+target :HashTheTweetTests, :exclusive => true do
+ pod 'Kiwi'
+end
