@@ -21,13 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Kiwi (2.3.0)
+  - STTwitter (0.1.5)
 
 DEPENDENCIES:
   - AFNetworking
   - Kiwi
+  - STTwitter
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+  STTwitter: 60f28af91d622b9a3f74f28cd021413277d413bb
 
 COCOAPODS: 0.33.1
