@@ -8,28 +8,27 @@
 
 #import "ViewController.h"
 #import <AFNetworking.h>
+#import "Tweet.h"
+#import <STTwitter/STTwitter.h>
+#import "TableViewController.h"
 
-@interface ViewController ()
-
-@property (weak, nonatomic) IBOutlet UILabel *bootcampLabel;
-
+@interface ViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *hashTagTextField;
+@property (strong, nonatomic) STTwitterAPI *stTwitterApi;
 @end
 
 @implementation ViewController
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if(self) {
+        self.stTwitterApi = [STTwitterAPI twitterAPIAppOnlyWithConsumerKey:@"kmpQ84G1f8BbAtwLJoWcM5MXK" consumerSecret:@"XPWIGcIaOlHKSRGOMggLBEBWR7v3eHEy0InitaZpoutY3b7MD1"];
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"http://www.mocky.io/v2/543fb96fc034f90c16e8af4c" parameters:nil success:
-     ^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
-
-         _bootcampLabel.text =   responseObject[@"title"];
-
-     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-         
-     }];
-
-
+    self.hashTagTextField.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -43,6 +42,34 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self.stTwitterApi verifyCredentialsWithSuccessBlock:^(NSString *bearerToken) {
+        
+        [self.stTwitterApi getSearchTweetsWithQuery:[@"#" stringByAppendingString:textField.text] successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
+            NSMutableArray *tweets = [[NSMutableArray alloc] initWithCapacity:[statuses count]];
+            for(NSDictionary *status in statuses) {
+                [tweets addObject:[[Tweet alloc] initWithMessage:status[@"text"] hashTags:nil]];
+            }
+            [self performSegueWithIdentifier:@"showTweets" sender:tweets];
+        } errorBlock:^(NSError *error) {
+            NSLog(@"%@", [error description]);
+        }];
+    }
+    errorBlock:^(NSError *error) {
+        NSLog(@"%@", [error description]);
+    }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSArray *)sender {
+    TableViewController *tableViewcontroller = [segue destinationViewController];
+    tableViewcontroller.tweets = sender;
 }
 
 @end

@@ -20,6 +20,8 @@
 		8491487319EFD0AC00243FA0 /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491487219EFD0AC00243FA0 /* TwitterUser.m */; };
 		8491487419EFD0AC00243FA0 /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491487219EFD0AC00243FA0 /* TwitterUser.m */; };
 		92A18227FE7F45849645FCB4 /* libPods-HashTheTweetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C21B8E9DC27047129916DB5E /* libPods-HashTheTweetTests.a */; };
+		F968A12319F150380027CC7A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F968A12219F150380027CC7A /* TableViewController.m */; };
+		F968A12419F150380027CC7A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F968A12219F150380027CC7A /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		8491487119EFD0AC00243FA0 /* TwitterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterUser.h; sourceTree = "<group>"; };
 		8491487219EFD0AC00243FA0 /* TwitterUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterUser.m; sourceTree = "<group>"; };
 		C21B8E9DC27047129916DB5E /* libPods-HashTheTweetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HashTheTweetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F968A12119F150380027CC7A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		F968A12219F150380027CC7A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				8491483D19EFCB3500243FA0 /* ViewController.h */,
 				8491483E19EFCB3500243FA0 /* ViewController.m */,
 				8491484019EFCB3500243FA0 /* Main.storyboard */,
+				F968A12119F150380027CC7A /* TableViewController.h */,
+				F968A12219F150380027CC7A /* TableViewController.m */,
 				8491484319EFCB3500243FA0 /* Images.xcassets */,
 				8491484519EFCB3500243FA0 /* LaunchScreen.xib */,
 				8491483619EFCB3500243FA0 /* Supporting Files */,
@@ -327,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8491483F19EFCB3500243FA0 /* ViewController.m in Sources */,
+				F968A12319F150380027CC7A /* TableViewController.m in Sources */,
 				8491487319EFD0AC00243FA0 /* TwitterUser.m in Sources */,
 				8491483C19EFCB3500243FA0 /* AppDelegate.m in Sources */,
 				8491483919EFCB3500243FA0 /* main.m in Sources */,
@@ -341,6 +348,7 @@
 				8491485319EFCB3500243FA0 /* HashTheTweetTests.m in Sources */,
 				8491487419EFD0AC00243FA0 /* TwitterUser.m in Sources */,
 				8491486019EFCB5E00243FA0 /* Tweet.m in Sources */,
+				F968A12419F150380027CC7A /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
