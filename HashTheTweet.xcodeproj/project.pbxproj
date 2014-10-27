@@ -20,6 +20,10 @@
 		8491487319EFD0AC00243FA0 /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491487219EFD0AC00243FA0 /* TwitterUser.m */; };
 		8491487419EFD0AC00243FA0 /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8491487219EFD0AC00243FA0 /* TwitterUser.m */; };
 		92A18227FE7F45849645FCB4 /* libPods-HashTheTweetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C21B8E9DC27047129916DB5E /* libPods-HashTheTweetTests.a */; };
+		F95AE4BE19FE6EF400C64846 /* MyCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F95AE4BD19FE6EF400C64846 /* MyCustomCell.m */; };
+		F95AE4BF19FE6EF400C64846 /* MyCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F95AE4BD19FE6EF400C64846 /* MyCustomCell.m */; };
+		F95AE4C219FE762000C64846 /* DummVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F95AE4C119FE762000C64846 /* DummVC.m */; };
+		F95AE4C319FE762000C64846 /* DummVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F95AE4C119FE762000C64846 /* DummVC.m */; };
 		F968A12319F150380027CC7A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F968A12219F150380027CC7A /* TableViewController.m */; };
 		F968A12419F150380027CC7A /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F968A12219F150380027CC7A /* TableViewController.m */; };
 /* End PBXBuildFile section */
@@ -56,6 +60,10 @@
 		8491487119EFD0AC00243FA0 /* TwitterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterUser.h; sourceTree = "<group>"; };
 		8491487219EFD0AC00243FA0 /* TwitterUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterUser.m; sourceTree = "<group>"; };
 		C21B8E9DC27047129916DB5E /* libPods-HashTheTweetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HashTheTweetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95AE4BC19FE6EF400C64846 /* MyCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomCell.h; sourceTree = "<group>"; };
+		F95AE4BD19FE6EF400C64846 /* MyCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomCell.m; sourceTree = "<group>"; };
+		F95AE4C019FE762000C64846 /* DummVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummVC.h; sourceTree = "<group>"; };
+		F95AE4C119FE762000C64846 /* DummVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummVC.m; sourceTree = "<group>"; };
 		F968A12119F150380027CC7A /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		F968A12219F150380027CC7A /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,11 +127,15 @@
 				8491483D19EFCB3500243FA0 /* ViewController.h */,
 				8491483E19EFCB3500243FA0 /* ViewController.m */,
 				8491484019EFCB3500243FA0 /* Main.storyboard */,
+				F95AE4BC19FE6EF400C64846 /* MyCustomCell.h */,
+				F95AE4BD19FE6EF400C64846 /* MyCustomCell.m */,
 				F968A12119F150380027CC7A /* TableViewController.h */,
 				F968A12219F150380027CC7A /* TableViewController.m */,
 				8491484319EFCB3500243FA0 /* Images.xcassets */,
 				8491484519EFCB3500243FA0 /* LaunchScreen.xib */,
 				8491483619EFCB3500243FA0 /* Supporting Files */,
+				F95AE4C019FE762000C64846 /* DummVC.h */,
+				F95AE4C119FE762000C64846 /* DummVC.m */,
 			);
 			path = HashTheTweet;
 			sourceTree = "<group>";
@@ -338,6 +350,8 @@
 				8491483C19EFCB3500243FA0 /* AppDelegate.m in Sources */,
 				8491483919EFCB3500243FA0 /* main.m in Sources */,
 				8491485F19EFCB5E00243FA0 /* Tweet.m in Sources */,
+				F95AE4BE19FE6EF400C64846 /* MyCustomCell.m in Sources */,
+				F95AE4C219FE762000C64846 /* DummVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +362,8 @@
 				8491485319EFCB3500243FA0 /* HashTheTweetTests.m in Sources */,
 				8491487419EFD0AC00243FA0 /* TwitterUser.m in Sources */,
 				8491486019EFCB5E00243FA0 /* Tweet.m in Sources */,
+				F95AE4C319FE762000C64846 /* DummVC.m in Sources */,
+				F95AE4BF19FE6EF400C64846 /* MyCustomCell.m in Sources */,
 				F968A12419F150380027CC7A /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

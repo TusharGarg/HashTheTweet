@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableViewController : UITableViewController
+@interface TableViewController : UITableViewController<UITableViewDelegate>
 @property (nonatomic, strong) NSArray *tweets;
+@property (nonatomic, strong) NSString *hashTag;
 @end

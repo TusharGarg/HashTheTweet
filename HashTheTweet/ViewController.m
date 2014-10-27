@@ -14,10 +14,14 @@
 
 @interface ViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *hashTagTextField;
+@property (weak, nonatomic) IBOutlet UILabel *hashSymbolLabel;
 @property (strong, nonatomic) STTwitterAPI *stTwitterApi;
 @end
 
 @implementation ViewController
+- (IBAction)clearTextBox:(id)sender {
+    self.hashTagTextField.text = @"";
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
@@ -29,16 +33,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.hashTagTextField.delegate = self;
+    self.hashSymbolLabel.userInteractionEnabled = YES;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-
-
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -70,6 +67,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSArray *)sender {
     TableViewController *tableViewcontroller = [segue destinationViewController];
     tableViewcontroller.tweets = sender;
+    tableViewcontroller.hashTag = self.hashTagTextField.text;
 }
 
 @end
